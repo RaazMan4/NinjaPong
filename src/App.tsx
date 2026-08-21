@@ -341,18 +341,47 @@ export default function App() {
         -Math.abs(ballVX.current);
     }
 
-    /* ==============================
-       PADDLE COLLISIONS
-    ============================== */
+  /* ==============================
+   PADDLE COLLISIONS
+============================== */
 
-    const paddleHalfWidth = 14;
+const paddleHalfWidth = 14;
 
-    /* MANYU TOP */
+/* MANYU TOP */
+
+if (
+  ballVY.current < 0 &&
+  ballY.current <= 22 &&
+  ballY.current >= 8 &&
+  Math.abs(
+    ballX.current -
+    manyuX.current
+  ) <= paddleHalfWidth
+) {
+  ballY.current = 20;
+
+  ballVY.current =
+    Math.abs(
+      ballVY.current
+    ) * 1.02;
+
+  const offset =
+    (
+      ballX.current -
+      manyuX.current
+    ) /
+    paddleHalfWidth;
+
+  ballVX.current +=
+    offset * 8;
+}
+
+/* NINJACAT BOTTOM */
 
 if (
   ballVY.current > 0 &&
-  ballY.current >= 89 &&
-  ballY.current <= 94 &&
+  ballY.current >= 86 &&
+  ballY.current <= 96 &&
   Math.abs(
     ballX.current -
     ninjaX.current
@@ -365,46 +394,16 @@ if (
       ballVY.current
     ) * 1.02;
 
-      const offset =
-        (
-          ballX.current -
-          manyuX.current
-        ) /
-        paddleHalfWidth;
+  const offset =
+    (
+      ballX.current -
+      ninjaX.current
+    ) /
+    paddleHalfWidth;
 
-      ballVX.current +=
-        offset * 8;
-    }
-
-    /* NINJACAT BOTTOM */
-
- if (
-      ballVY.current > 0 &&
-      ballY.current >= 84 &&
-      ballY.current <= 94 &&
-      Math.abs(
-        ballX.current -
-        ninjaX.current
-      ) <= paddleHalfWidth
-    ) {
-      ballY.current = 94;
-
-      ballVY.current =
-        -Math.abs(
-          ballVY.current
-        ) * 1.02;
-
-
-      const offset =
-        (
-          ballX.current -
-          ninjaX.current
-        ) /
-        paddleHalfWidth;
-
-      ballVX.current +=
-        offset * 8;
-    }
+  ballVX.current +=
+    offset * 8;
+}
 
     /* ==============================
        GOALS
