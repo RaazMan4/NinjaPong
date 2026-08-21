@@ -380,7 +380,7 @@ export default function App() {
 
  if (
       ballVY.current > 0 &&
-      ballY.current >= 94 &&
+      ballY.current >= 84 &&
       ballY.current <= 94 &&
       Math.abs(
         ballX.current -
