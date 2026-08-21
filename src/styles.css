@@ -92,7 +92,7 @@ button {
 .score-panel {
   position: absolute;
 
-  top: 3%;
+  top: 7%;
   left: 50%;
 
   transform:
@@ -221,7 +221,7 @@ button {
 */
 
 .manyu-paddle {
-  top: 15.5%;
+  top: 25.5%;
 
   filter:
     drop-shadow(
