@@ -381,13 +381,13 @@ export default function App() {
     if (
       ballVY.current > 0 &&
       ballY.current >= 90 &&
-      ballY.current <= 96 &&
+      ballY.current <= 92 &&
       Math.abs(
         ballX.current -
         ninjaX.current
       ) <= paddleHalfWidth
     ) {
-      ballY.current = 96;
+      ballY.current = 92;
 
       ballVY.current =
         -Math.abs(
