@@ -349,21 +349,21 @@ export default function App() {
 
     /* MANYU TOP */
 
-    if (
-      ballVY.current > 0 &&
-      ballY.current >= 84 &&
-      ballY.current <= 94 &&
-      Math.abs(
-        ballX.current -
-        ninjaX.current
-      ) <= paddleHalfWidth
-    ) {
-      ballY.current = 94;
+if (
+  ballVY.current > 0 &&
+  ballY.current >= 89 &&
+  ballY.current <= 94 &&
+  Math.abs(
+    ballX.current -
+    ninjaX.current
+  ) <= paddleHalfWidth
+) {
+  ballY.current = 90;
 
-      ballVY.current =
-        -Math.abs(
-          ballVY.current
-        ) * 1.02;
+  ballVY.current =
+    -Math.abs(
+      ballVY.current
+    ) * 1.02;
 
       const offset =
         (
