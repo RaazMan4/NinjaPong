@@ -378,21 +378,22 @@ export default function App() {
 
     /* NINJACAT BOTTOM */
 
-    if (
+ if (
       ballVY.current > 0 &&
-      ballY.current >= 90 &&
-      ballY.current <= 92 &&
+      ballY.current >= 94 &&
+      ballY.current <= 94 &&
       Math.abs(
         ballX.current -
         ninjaX.current
       ) <= paddleHalfWidth
     ) {
-      ballY.current = 92;
+      ballY.current = 94;
 
       ballVY.current =
         -Math.abs(
           ballVY.current
         ) * 1.02;
+
 
       const offset =
         (
