@@ -92,7 +92,7 @@ button {
 .score-panel {
   position: absolute;
 
-  top: 1%;
+  top: 3%;
   left: 50%;
 
   transform:
@@ -221,7 +221,7 @@ button {
 */
 
 .manyu-paddle {
-  top: 10.5%;
+  top: 11.5%;
 
   filter:
     drop-shadow(
@@ -231,7 +231,7 @@ button {
 }
 
 .ninja-paddle {
-  bottom:10.5%;
+  bottom:13.5%;
 
   filter:
     drop-shadow(
@@ -269,6 +269,7 @@ button {
       rgba(255, 180, 20, 1)
     );
 }
+
 
 /* ==================================================
    TRAIL
