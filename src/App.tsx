@@ -350,18 +350,18 @@ export default function App() {
     /* MANYU TOP */
 
     if (
-      ballVY.current < 0 &&
-      ballY.current <= 20 &&
-      ballY.current >= 12 &&
+      ballVY.current > 0 &&
+      ballY.current >= 84 &&
+      ballY.current <= 94 &&
       Math.abs(
         ballX.current -
-        manyuX.current
+        ninjaX.current
       ) <= paddleHalfWidth
     ) {
-      ballY.current = 20;
+      ballY.current = 94;
 
       ballVY.current =
-        Math.abs(
+        -Math.abs(
           ballVY.current
         ) * 1.02;
 
